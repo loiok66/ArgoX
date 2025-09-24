@@ -1461,7 +1461,7 @@ menu_setting() {
     if [ ${STATUS[0]} = "$(text 28)" ]; then
       AEGO_MEMORY="$(text 52): $(awk '/VmRSS/{printf "%.1f\n", $2/1024}' /proc/$(awk '/\/etc\/argox\/cloudflared/{print $1}' <<< "$PS_LIST")/status) MB"
       [ "$IS_NGINX" = 'is_nginx' ] && NGINX_MEMORY="$(text 52): $(awk '/VmRSS/{printf "%.1f\n", $2/1024}' /proc/$(awk '/\/etc\/argox\/nginx/{print $1}' <<< "$PS_LIST")/status) MB"
-      OPTION[2]="2.  $(text 27) Argo (argox -a)"
+      OPTION[2]="2.  $(text 27) Argo \(argox -a\)"
     else
       OPTION[2]="2.  $(text 28) Argo (argox -a)"
     fi
